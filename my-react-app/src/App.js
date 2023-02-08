@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-
+import React from 'react';
+import Slider from './slider';
 
 function App() {
   return (
@@ -13,8 +14,11 @@ function App() {
         <img src='https://greenbeltapts.com/wp-content/uploads/Greenbelt-Apartment-Floor-Plan-A-1-Bedroom-1-Bath.png' width="400"  />
         <div className='room'>
           <h2>Kitchen</h2>
+          <Slider class='slider'/>
           <h2>Lounge</h2>
+          <Slider class='slider'/>
           <h2>Master Bedroom</h2>
+          <Slider class='slider'/>
         </div>
       </div>
       
