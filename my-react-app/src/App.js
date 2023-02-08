@@ -21,7 +21,16 @@ function App() {
       console.log(error);
     })
   }, []);
-
+  const onClickSwitch = async () => {
+    try {
+      axios.put('http://group14.exceed19.online/room/1/state',
+      {"state": 0})
+      console.log('success')
+    }
+    catch (error) {
+      console.log(error);
+    } 
+  };
   return (
     <main>
      
@@ -35,7 +44,7 @@ function App() {
           <h2>Kitchen</h2>  
           <Demo1 class='Demo1' name={'1'}/>
           {}
-          <SwitchExample l={1}/>
+          <SwitchExample onClickSwitch={onClickSwitch}/>
           <Slider class='slider'/>
           {/* {ledkit? <div> hello </div> : <SwitchExample />} */}
           <h2>Lounge</h2>
