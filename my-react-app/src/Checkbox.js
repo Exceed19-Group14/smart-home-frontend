@@ -1,26 +1,23 @@
-import React, { Component } from "react";
+import React from 'react'
+import './App.css'
 
-class Demo1 extends Component {
-  constructor() {
-    super();
-    this.state = {
-      name: "React"
-    };
-    this.onChangeValue = this.onChangeValue.bind(this);
-  }
-
-  onChangeValue(event) {
-    console.log(event.target.value);
-  }
-
-  render() {
-    return (
-      <div onChange={this.onChangeValue}>
-        <input type="radio" value="auto" name="mode" /> Automatic
-        <input type="radio" value="manual" name="mode"/> Manual
-      </div>
-    );
-  }
+const Demo1 = ({name}) => {
+  return (
+<>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name={name} id="flexRadioDefault1"/>
+  <label class="form-check-label" for="flexRadioDefault1">
+    Manual
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name={name} id="flexRadioDefault2" checked/>
+  <label class="form-check-label" for="flexRadioDefault2">
+    Auto
+  </label>
+</div>
+</>
+  )
 }
 
-export default Demo1;
+export default Demo1
